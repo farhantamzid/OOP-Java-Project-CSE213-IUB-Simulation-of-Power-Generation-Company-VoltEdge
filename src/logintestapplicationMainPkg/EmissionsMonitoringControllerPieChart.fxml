@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="462.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logintestapplicationMainPkg.EmissionsMonitoringControllerPieChart">
+    <children>
+        
+        <PieChart fx:id="circular" layoutX="244.0" layoutY="72.0" prefHeight="360.0" prefWidth="360.0">
+            <!-- No data added in FXML, will be added in the controller -->
+        </PieChart>
+    </children>
+</AnchorPane>

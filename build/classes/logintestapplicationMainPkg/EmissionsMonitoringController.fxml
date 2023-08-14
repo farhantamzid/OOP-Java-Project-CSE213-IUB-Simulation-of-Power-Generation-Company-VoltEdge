@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logintestapplicationMainPkg.EmissionsMonitoringController">
+    <children>
+        <LineChart fx:id="lineChart" layoutX="20.0" layoutY="20.0" prefHeight="360.0" prefWidth="560.0">
+            <xAxis>
+                <NumberAxis label="Time Period" lowerBound="1980" prefHeight="53.0" prefWidth="448.0" tickUnit="5" upperBound="2023" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Environmental Impact" />
+            </yAxis>
+        </LineChart>
+    </children>
+</AnchorPane>

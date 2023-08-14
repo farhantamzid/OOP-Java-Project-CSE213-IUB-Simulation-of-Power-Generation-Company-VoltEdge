@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="548.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logintestapplicationMainPkg.CustomerPurchaseTableController">
+   <children>
+      <TableView fx:id="purchaseTable" layoutX="34.0" layoutY="35.0" prefHeight="483.0" prefWidth="533.0">
+         <columns>
+            <TableColumn fx:id="EnergyTypeColumn" prefWidth="145.0" text="Energy Type" />
+            <TableColumn fx:id="AmountColumn" prefWidth="136.0" text="Amount (kWh)" />
+            <TableColumn fx:id="priceColumn" prefWidth="136.0" text="Price" />
+            <TableColumn fx:id="dateColumn" prefWidth="115.0" text="Date" />
+         </columns>
+      </TableView>
+   </children>
+   
+</AnchorPane>
