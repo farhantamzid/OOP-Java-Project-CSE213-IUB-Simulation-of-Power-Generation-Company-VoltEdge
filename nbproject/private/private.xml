@@ -3,7 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/farha/Desktop/GitHub%20Repository/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/User.java</file>
+=======
+            <file>file:/Users/farhantamzid/Documents/GitHub/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/User.java</file>
+            <file>file:/Users/farhantamzid/Documents/GitHub/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/collaborator.java</file>
+>>>>>>> e9b9dae64525b9b4dd3b8c656c5f3e0a0935718e
         </group>
     </open-files>
 </project-private>
