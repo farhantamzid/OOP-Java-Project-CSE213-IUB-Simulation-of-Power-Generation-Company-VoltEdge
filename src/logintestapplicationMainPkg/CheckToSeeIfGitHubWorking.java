@@ -9,5 +9,8 @@ package logintestapplicationMainPkg;
  * @author User
  */
 public class CheckToSeeIfGitHubWorking {
-    
+    public void sex() {
+            System.out.println("Ahhhhh Baby");
+
+}
 }
