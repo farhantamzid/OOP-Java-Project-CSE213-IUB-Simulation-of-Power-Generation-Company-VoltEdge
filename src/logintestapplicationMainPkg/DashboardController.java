@@ -51,7 +51,15 @@ public class DashboardController implements Initializable {
     }
 
     @FXML
-    private void SelectUserFinance(ActionEvent event) {
+    private void SelectUserFinance(ActionEvent event) throws IOException {
+        Parent FinancemanagerDashboardViewParent = FXMLLoader.load(getClass().getResource("FinancemanagerDashboard.fxml"));
+        Scene FinancemanagerDashboardViewScene = new Scene(FinancemanagerDashboardViewParent);
+        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("Customer");
+        newWindow.setScene(FinancemanagerDashboardViewScene);
+        newWindow.show();
     }
 
     @FXML

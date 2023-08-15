@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="611.0" prefWidth="989.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logintestapplicationMainPkg.FinancemanagerDashboardController">
+   <children>
+      <MenuBar layoutY="7.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Payment Request Approval">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#OnActionPurchaseRequests" text="Approve Purchase Request" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Payment History">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#OnActionPaymentHistory" text="Show Payment History Table" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="View Expense ">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#OnActionExpenseReport" text="Show Expense Report" />
+                  <MenuItem mnemonicParsing="false" onAction="#OnActionExpenseReportPiechart" text="Show Expense History PieChart" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Requests Approval">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#onActionPurchaseRequests" text="Equipment Purchase Requests" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Salary Payout">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#onActionApproveSalary" text="Approve Salary" />
+                  <MenuItem mnemonicParsing="false" onAction="#OnActionSalaryReport" text="Generate Salary Report" />
+                  <Menu mnemonicParsing="false" text="Income Statement">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#OnActionVIewIncomeStatement" text="View Income Statement" />
+                        <MenuItem mnemonicParsing="false" onAction="#OnActionIncomeStatementGeneration" text="Generate Income Statement Report" />
+                    </items>
+                  </Menu>
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label layoutX="171.0" layoutY="273.0" prefHeight="65.0" prefWidth="648.0" text="Finance Manager Dashboard" textAlignment="RIGHT" wrapText="true">
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </Label>
+      <Button layoutX="100.0" layoutY="100.0" mnemonicParsing="false" text="Give Attendance" onAction="#giveAttendance"/>
+   </children>   
+</AnchorPane>
