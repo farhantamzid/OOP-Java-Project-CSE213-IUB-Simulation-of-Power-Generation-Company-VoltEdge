@@ -6,6 +6,7 @@ package logintestapplicationMainPkg;
 
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -64,5 +65,21 @@ public class FinancemanagerDashboardController implements Initializable {
         financeManager.markAttendance();
         System.out.println("Attendance marked for FinanceManager: " + financeManager.getName());
     }
+
+    @FXML
+    private void showAttendanceRecords(ActionEvent event) {
+        List<Attendance> attendanceRecords = AttendanceFileHandler.readAttendanceRecords();
     
-}
+    if (attendanceRecords.isEmpty()) {
+        System.out.println("No attendance records found.");
+        return;
+    }
+
+    System.out.println("Attendance Records:");
+    for (Attendance record : attendanceRecords) {
+        System.out.println("Employee ID: " + record.getEmployeeId() +
+                           ", Attendance Date: " + record.getAttendanceDate());
+
+    }
+    
+}}
