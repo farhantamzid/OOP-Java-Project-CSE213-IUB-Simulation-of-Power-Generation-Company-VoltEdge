@@ -67,9 +67,9 @@ public class FinancemanagerDashboardController implements Initializable {
     }
 
     @FXML
-    private void showAttendanceRecords(ActionEvent event) {
-        List<Attendance> attendanceRecords = AttendanceFileHandler.readAttendanceRecords();
-    
+private void showAttendanceRecords(ActionEvent event) {
+    List<Attendance> attendanceRecords = AttendanceFileHandler.readAttendanceRecords();
+
     if (attendanceRecords.isEmpty()) {
         System.out.println("No attendance records found.");
         return;
@@ -77,9 +77,16 @@ public class FinancemanagerDashboardController implements Initializable {
 
     System.out.println("Attendance Records:");
     for (Attendance record : attendanceRecords) {
-        System.out.println("Employee ID: " + record.getEmployeeId() +
-                           ", Attendance Date: " + record.getAttendanceDate());
+        User user = record.getEmployee();
+        if (user instanceof Employee) {
+            Employee employee = (Employee) user;
 
+            System.out.println("Employee Name: " + employee.getName() +
+                               ", Employee ID: " + employee.getId() +
+                               ", Designation: " + employee.getDesignation() +
+                               ", Salary: " + employee.getSalary() +
+                               ", Attendance Date: " + record.getAttendanceDate());
+        }
     }
-    
-}}
+}
+}
