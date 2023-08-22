@@ -17,11 +17,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-/**
- * FXML Controller class
- *
- * @author farhan
- */
+
+
 public class CustomerBuyRenewableController implements Initializable {
 
     @FXML
