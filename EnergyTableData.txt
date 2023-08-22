@@ -6,3 +6,4 @@ Renewable,1500,19500,2023-08-14
 Renewable,90,1170,2023-08-24
 Non-Renewable,10,170,2023-08-01
 Non-Renewable,100,1700,2023-08-01
+Renewable,1221,15873,2023-08-01

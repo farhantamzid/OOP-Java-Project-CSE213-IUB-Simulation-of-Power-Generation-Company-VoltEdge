@@ -38,37 +38,22 @@ public class CustomerBuyRenewableController implements Initializable {
 
     @FXML
     private void RenewablePurchaseButtonOnClick(ActionEvent event) {
-        RenewableElectricity e2 = new RenewableElectricity();
-        
-    String EnergyType = "Renewable";
-    String AmountKWH= RenewableAmountTextField.getText();
-    String TotalPrice = Integer.toString(Integer.parseInt(RenewableAmountTextField.getText())*e2.getPrice());
-    LocalDate PurchaseDate = RenewablePurchaseDatePicker.getValue();
+        String amountKWH = RenewableAmountTextField.getText();
+        LocalDate purchaseDate = RenewablePurchaseDatePicker.getValue();
 
-
-    String purchaseData = EnergyType + "," + AmountKWH + "," + TotalPrice  + "," + PurchaseDate;
-
-    try (FileWriter fileWriter = new FileWriter("EnergyTableData.txt", true);
-         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
-
-        bufferedWriter.write(purchaseData);
-        bufferedWriter.newLine(); // Add a new line for each entry
-
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
+        EnergyPurchaseService.purchaseRenewableEnergy(amountKWH, purchaseDate);
         System.out.println("Button Clicked");
     }
         
 
     @FXML
     private void RenewableShowPriceButtonOnClick(ActionEvent event) {
-        RenewableElectricity e1 = new RenewableElectricity();
-        
-        RenewablePriceViewLabel.setText(Integer.toString(Integer.parseInt(RenewableAmountTextField.getText())*e1.getPrice())+" "+"Tk.");
-        
-        
-        
+         
+        String amountKWH = RenewableAmountTextField.getText();
+        int totalPrice = EnergyPurchaseService.calculateRenewableEnergyPrice(amountKWH);
+
+        RenewablePriceViewLabel.setText(totalPrice + " Tk.");
+               
     }
 
     
