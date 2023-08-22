@@ -6,6 +6,7 @@ package logintestapplicationMainPkg;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -84,6 +85,12 @@ public class CustomerDashboardController implements Initializable {
         newWindow.setScene(PieChartViewScene);
         newWindow.show();
         
+    }
+
+    @FXML
+    private void pdfGenerationPurchaseMenubuttonOnclick(ActionEvent event) {
+        List<PurchaseData> purchaseDataList = PurchaseFileDataReaderPDF.readPurchaseDataFromFile("EnergyTableData.txt");
+        PurchasePDFGenerator.generatePDF(purchaseDataList, "purchase_report.pdf");
     }
 
     

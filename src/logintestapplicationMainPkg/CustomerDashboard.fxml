@@ -20,6 +20,7 @@
             <Menu mnemonicParsing="false" text="Purchase History">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#OnActionTransactionTable" text="Show Transaction History" />
+                  <MenuItem mnemonicParsing="false" onAction="#pdfGenerationPurchaseMenubuttonOnclick" text="GeneratePDF" />
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Chart">
