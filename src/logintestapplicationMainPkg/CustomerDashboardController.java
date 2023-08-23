@@ -73,7 +73,6 @@ public class CustomerDashboardController implements Initializable {
         newWindow.show();
     }
 
-    @FXML
     private void OnActionPieChart(ActionEvent event) throws IOException{
                 
         Parent PieChartViewParent = FXMLLoader.load(getClass().getResource("PurchasedEnergyTypePieChart.fxml"));
@@ -91,6 +90,58 @@ public class CustomerDashboardController implements Initializable {
     private void pdfGenerationPurchaseMenubuttonOnclick(ActionEvent event) {
         List<PurchaseData> purchaseDataList = PurchaseFileDataReaderPDF.readPurchaseDataFromFile("EnergyTableData.txt");
         PurchasePDFGenerator.generatePDF(purchaseDataList, "purchase_report.pdf");
+    }
+
+    @FXML
+    private void payBillMenuOnaction(ActionEvent event) {
+    }
+
+    @FXML
+    private void newConncectionOnactionMenu(ActionEvent event) throws IOException {
+        Parent ConnectionApplyDashboardViewParent = FXMLLoader.load(getClass().getResource("ConnectionApplyDashboard.fxml"));
+        Scene ConnectionApplyDashboardViewScene = new Scene(ConnectionApplyDashboardViewParent);
+        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("Connections");
+        newWindow.setScene(ConnectionApplyDashboardViewScene);
+        newWindow.show();
+    }
+
+    @FXML
+    private void allConncectionOnactionMenu(ActionEvent event) throws IOException {
+        Parent ConnectionTableViewParent = FXMLLoader.load(getClass().getResource("ConnectionTableView.fxml"));
+        Scene ConnectionTableViewScene = new Scene(ConnectionTableViewParent);
+        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("Connections Table View");
+        newWindow.setScene(ConnectionTableViewScene);
+        newWindow.show();
+    }
+
+    @FXML
+    private void repairRequestMenuOnAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void showRepairHistoryMenuOnAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void OnActionEnergyBarChart(ActionEvent event) throws IOException {
+    }
+
+    @FXML
+    private void OnActionConnectionPieChart(ActionEvent event) throws IOException {
+        Parent ConnectionPieChartParent = FXMLLoader.load(getClass().getResource("ConnectionPieChart.fxml"));
+        Scene ConnectionPieChartViewScene = new Scene(ConnectionPieChartParent);
+        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("Connections Pie Chart");
+        newWindow.setScene(ConnectionPieChartViewScene);
+        newWindow.show();
     }
 
     
