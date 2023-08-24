@@ -4,19 +4,33 @@
  */
 package logintestapplicationMainPkg;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-/**
- *
- * @author farhan
- */
-public class PurchaseData {
+
+public class PurchaseData implements Serializable{
     private String EnergyType;
     private String AmountKWH;
-    private String  TotalPrice;
+    private Integer  TotalPrice;
     private LocalDate PurchaseDate;
 
-    public PurchaseData(String energytype, String amountkwh, String totalprice, LocalDate purchasedate) {
+    public void setEnergyType(String EnergyType) {
+        this.EnergyType = EnergyType;
+    }
+
+    public void setAmountKWH(String AmountKWH) {
+        this.AmountKWH = AmountKWH;
+    }
+
+    public void setTotalPrice(Integer TotalPrice) {
+        this.TotalPrice = TotalPrice;
+    }
+
+    public void setPurchaseDate(LocalDate PurchaseDate) {
+        this.PurchaseDate = PurchaseDate;
+    }
+
+    public PurchaseData(String energytype, String amountkwh, Integer totalprice, LocalDate purchasedate) {
         this.EnergyType = energytype;
         this.AmountKWH = amountkwh;
         this.TotalPrice = totalprice;
@@ -31,7 +45,7 @@ public class PurchaseData {
         return AmountKWH;
     }
 
-    public String getTotalPrice() {
+    public Integer getTotalPrice() {
         return TotalPrice;
     }
 

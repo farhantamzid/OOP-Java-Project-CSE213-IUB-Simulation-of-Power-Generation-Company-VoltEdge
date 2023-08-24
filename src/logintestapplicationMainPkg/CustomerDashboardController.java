@@ -88,7 +88,7 @@ public class CustomerDashboardController implements Initializable {
 
     @FXML
     private void pdfGenerationPurchaseMenubuttonOnclick(ActionEvent event) {
-        List<PurchaseData> purchaseDataList = PurchaseFileDataReaderPDF.readPurchaseDataFromFile("EnergyTableData.txt");
+        List<PurchaseData> purchaseDataList = PurchaseFileDataReaderPDF.readPurchaseDataFromFile("EnergyTableData.bin");
         PurchasePDFGenerator.generatePDF(purchaseDataList, "purchase_report.pdf");
     }
 
