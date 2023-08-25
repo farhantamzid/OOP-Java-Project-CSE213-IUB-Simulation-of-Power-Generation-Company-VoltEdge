@@ -39,7 +39,7 @@ public class CustomerPurchaseTableController implements Initializable {
     }
 
     private void populateTableView() {
-        ObservableList<PurchaseData> purchasedatas = FXCollections.observableArrayList(EnergyPurchaseService.readPurchaseData());
+        ObservableList<PurchaseData> purchasedatas = FXCollections.observableArrayList(PurchaseDataFileHandling.loadPurchaseData());
         purchaseTable.setItems(purchasedatas);
     }
 }
