@@ -91,7 +91,7 @@ public class CustomerDashboardController implements Initializable {
     }
 
     @FXML
-    private void payBillMenuOnaction(ActionEvent event) {
+    private void payBillMenuOnaction(ActionEvent event) throws IOException {
     }
 
     @FXML
