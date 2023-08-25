@@ -84,6 +84,14 @@ public class CustomerDashboardController implements Initializable {
     }
 
 
+<<<<<<< HEAD
+=======
+    @FXML
+    private void payBillMenuOnaction(ActionEvent event) throws IOException {
+    }
+
+    @FXML
+>>>>>>> b85490bcb8a1d760cb6aa097374c401fab308632
     private void newConncectionOnactionMenu(ActionEvent event) throws IOException {
         Parent ConnectionApplyDashboardViewParent = FXMLLoader.load(getClass().getResource("ConnectionApplyDashboard.fxml"));
         Scene ConnectionApplyDashboardViewScene = new Scene(ConnectionApplyDashboardViewParent);

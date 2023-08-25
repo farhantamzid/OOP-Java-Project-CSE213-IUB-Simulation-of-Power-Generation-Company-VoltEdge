@@ -8,9 +8,14 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+<<<<<<< HEAD
     <jar href="OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge.jar" size="72645" download="eager" />
     <jar href="lib\itextpdf-5.5.13.3.jar" size="2334491" download="eager" />
     <jar href="lib\itextpdf-5.5.9.jar" size="2334491" download="eager" />
+=======
+    <jar href="OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge.jar" size="61583" download="eager" />
+    <jar href="lib\itextpdf-5.5.9.jar" size="2287148" download="eager" />
+>>>>>>> b85490bcb8a1d760cb6aa097374c401fab308632
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="logintestapplicationMainPkg.MainClassApplication"  name="OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge" />
   <update check="always"/>
