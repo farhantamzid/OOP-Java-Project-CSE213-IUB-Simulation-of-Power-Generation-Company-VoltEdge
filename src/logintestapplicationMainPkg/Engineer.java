@@ -4,10 +4,19 @@
  */
 package logintestapplicationMainPkg;
 
+import java.io.Serializable;
+import java.time.LocalDate;
+
 /**
  *
  * @author farhan
  */
-public class Engineer {
+public class Engineer extends Employee implements Serializable{
+    
+    public Engineer(String designation, int salary, boolean attendance, boolean applyforleave, String email, String password, String name, LocalDate dob, int id) {
+        super(designation, salary, attendance, applyforleave, email, password, name, dob, id);
+        
+        
+    }
     
 }

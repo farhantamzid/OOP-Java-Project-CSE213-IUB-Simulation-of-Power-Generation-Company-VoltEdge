@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="535.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logintestapplicationMainPkg.generatorOnOffScene">
+   <children>
+      <TableView fx:id="equipmentTable" layoutX="51.0" layoutY="49.0" prefHeight="437.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="103.0" text="Equipment ID" />
+          <TableColumn fx:id="name" prefWidth="85.0" text="Type" />
+            <TableColumn fx:id="power" prefWidth="134.0" text="Max Power" />
+            <TableColumn fx:id="status" prefWidth="177.0" text="Status - (True=On/False=Off)" />
+        </columns>
+      </TableView>
+      <Button layoutX="599.0" layoutY="208.0" mnemonicParsing="false" onAction="#onOffButton" prefHeight="120.0" prefWidth="162.0" text="Turn On/Off">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <BorderPane fx:id="borderPaneId" prefHeight="535.0" prefWidth="794.0" />
+   </children>
+</AnchorPane>

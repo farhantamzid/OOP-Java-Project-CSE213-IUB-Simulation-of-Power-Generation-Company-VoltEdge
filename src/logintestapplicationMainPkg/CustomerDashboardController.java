@@ -34,7 +34,6 @@ public class CustomerDashboardController implements Initializable {
 
 
 
-    @FXML
     private void OnActionRenewable(ActionEvent event) throws IOException{
         
         Parent BuyRenewableViewParent = FXMLLoader.load(getClass().getResource("CustomerBuyRenewable.fxml"));
@@ -47,7 +46,6 @@ public class CustomerDashboardController implements Initializable {
         newWindow.show();
     }
 
-    @FXML
     private void OnActionNonRenewable(ActionEvent event) throws IOException{
                         
         Parent CustomerBuyNonRenewableViewParent = FXMLLoader.load(getClass().getResource("CustomerBuyNonRenewable.fxml"));
@@ -60,7 +58,6 @@ public class CustomerDashboardController implements Initializable {
         newWindow.show();
     }
 
-    @FXML
     private void OnActionTransactionTable(ActionEvent event)  throws IOException{
                 
         Parent CustomerPurchaseTableViewParent = FXMLLoader.load(getClass().getResource("CustomerPurchaseTable.fxml"));
@@ -86,15 +83,7 @@ public class CustomerDashboardController implements Initializable {
         
     }
 
-    @FXML
-    private void pdfGenerationPurchaseMenubuttonOnclick(ActionEvent event) {
-    }
 
-    @FXML
-    private void payBillMenuOnaction(ActionEvent event) {
-    }
-
-    @FXML
     private void newConncectionOnactionMenu(ActionEvent event) throws IOException {
         Parent ConnectionApplyDashboardViewParent = FXMLLoader.load(getClass().getResource("ConnectionApplyDashboard.fxml"));
         Scene ConnectionApplyDashboardViewScene = new Scene(ConnectionApplyDashboardViewParent);
@@ -106,7 +95,6 @@ public class CustomerDashboardController implements Initializable {
         newWindow.show();
     }
 
-    @FXML
     private void allConncectionOnactionMenu(ActionEvent event) throws IOException {
         Parent ConnectionTableViewParent = FXMLLoader.load(getClass().getResource("ConnectionTableView.fxml"));
         Scene ConnectionTableViewScene = new Scene(ConnectionTableViewParent);
@@ -118,7 +106,6 @@ public class CustomerDashboardController implements Initializable {
         newWindow.show();
     }
 
-    @FXML
     private void repairRequestMenuOnAction(ActionEvent event) throws IOException {
         Parent RepairRequestViewParent = FXMLLoader.load(getClass().getResource("RepairRequestSceneController.fxml"));
         Scene RepairRequestViewScene = new Scene(RepairRequestViewParent);
@@ -130,15 +117,7 @@ public class CustomerDashboardController implements Initializable {
         newWindow.show();
     }
 
-    @FXML
-    private void showRepairHistoryMenuOnAction(ActionEvent event) {
-    }
 
-    @FXML
-    private void OnActionEnergyBarChart(ActionEvent event) throws IOException {
-    }
-
-    @FXML
     private void OnActionConnectionPieChart(ActionEvent event) throws IOException {
         Parent ConnectionPieChartParent = FXMLLoader.load(getClass().getResource("ConnectionPieChart.fxml"));
         Scene ConnectionPieChartViewScene = new Scene(ConnectionPieChartParent);
@@ -148,6 +127,10 @@ public class CustomerDashboardController implements Initializable {
         newWindow.setTitle("Connections Pie Chart");
         newWindow.setScene(ConnectionPieChartViewScene);
         newWindow.show();
+    }
+
+    @FXML
+    private void turbineOnOffButtonOnClick(ActionEvent event) {
     }
 
     
