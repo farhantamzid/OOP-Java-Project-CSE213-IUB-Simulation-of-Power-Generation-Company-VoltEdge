@@ -88,8 +88,6 @@ public class CustomerDashboardController implements Initializable {
 
     @FXML
     private void pdfGenerationPurchaseMenubuttonOnclick(ActionEvent event) {
-        List<PurchaseData> purchaseDataList = PurchaseFileDataReaderPDF.readPurchaseDataFromFile("EnergyTableData.bin");
-        PurchasePDFGenerator.generatePDF(purchaseDataList, "purchase_report.pdf");
     }
 
     @FXML
@@ -121,7 +119,15 @@ public class CustomerDashboardController implements Initializable {
     }
 
     @FXML
-    private void repairRequestMenuOnAction(ActionEvent event) {
+    private void repairRequestMenuOnAction(ActionEvent event) throws IOException {
+        Parent RepairRequestViewParent = FXMLLoader.load(getClass().getResource("RepairRequestSceneController.fxml"));
+        Scene RepairRequestViewScene = new Scene(RepairRequestViewParent);
+        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("Connections Table View");
+        newWindow.setScene(RepairRequestViewScene);
+        newWindow.show();
     }
 
     @FXML
