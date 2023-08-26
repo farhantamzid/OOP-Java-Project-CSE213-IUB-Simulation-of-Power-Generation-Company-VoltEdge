@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logintestapplicationMainPkg.BarChartController">
+    <BarChart fx:id="barChart" layoutY="78.0" prefHeight="300.0" prefWidth="580.0">
+        <xAxis>
+            <CategoryAxis label="Purchase Date" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Total Price" side="LEFT" />
+        </yAxis>
+    </BarChart>
+   <Label layoutX="31.0" layoutY="24.0" text="Energy BarChart By Date:" />
+</AnchorPane>

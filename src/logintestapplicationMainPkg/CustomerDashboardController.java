@@ -91,6 +91,14 @@ public class CustomerDashboardController implements Initializable {
 
     @FXML
     private void payBillMenuOnaction(ActionEvent event) throws IOException {
+        Parent PayBillViewParent = FXMLLoader.load(getClass().getResource("PayBill.fxml"));
+        Scene PayBillViewScene = new Scene(PayBillViewParent);
+        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("Connections");
+        newWindow.setScene(PayBillViewScene);
+        newWindow.show();
     }
 
     @FXML
@@ -156,7 +164,15 @@ public class CustomerDashboardController implements Initializable {
     }
 
     @FXML
-    private void OnActionEnergyBarChart(ActionEvent event) {
+    private void OnActionEnergyBarChart(ActionEvent event) throws IOException {
+        Parent EnergyBarChartParent = FXMLLoader.load(getClass().getResource("BarChartScene.fxml"));
+        Scene EnergyBarChartScene = new Scene(EnergyBarChartParent);
+        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("Pie-Chart");
+        newWindow.setScene(EnergyBarChartScene);
+        newWindow.show();
     }
 
     

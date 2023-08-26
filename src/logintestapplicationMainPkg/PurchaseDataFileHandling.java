@@ -30,5 +30,24 @@ public class PurchaseDataFileHandling implements Serializable{
         }
         return purchaseDataList;
     }
+        public static int calculateTotalPriceSum(List<PurchaseData> purchaseDataList) {
+        int sum = 0;
+        for (PurchaseData purchaseData : purchaseDataList) {
+            sum += purchaseData.getTotalPrice();
+        }
+        return sum;
+        
 
     }
+    public static void saveTotalPrice(int totalPrice) {
+    try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("total_price.bin"))) {
+        oos.writeInt(totalPrice);
+        System.out.println("Bill Paid.");
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+
+
+
+
+}}
