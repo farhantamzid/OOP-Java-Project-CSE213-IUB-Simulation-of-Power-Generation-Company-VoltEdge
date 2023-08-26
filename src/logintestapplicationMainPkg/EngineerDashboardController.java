@@ -33,17 +33,7 @@ public class EngineerDashboardController implements Initializable {
 
     @FXML
     private void generatorOffButtonOnClick(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("EngineerDashboard.fxml"));
-        Parent EngineerDashboardViewParent = loader.load();
-        Scene EngineerDashboardViewScene = new Scene(EngineerDashboardViewParent);
 
-        // Get the reference to the root of the FXML file
-        Parent root = borderPaneId.getScene().getRoot();
-
-        // Set the new scene in the existing window
-        Stage window = (Stage) root.getScene().getWindow();
-        window.setScene(EngineerDashboardViewScene);
-        
         
 
     }

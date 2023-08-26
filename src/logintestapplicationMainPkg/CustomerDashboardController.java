@@ -4,6 +4,7 @@
  */
 package logintestapplicationMainPkg;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -143,7 +144,11 @@ public class CustomerDashboardController implements Initializable {
     }
 
     @FXML
-    private void pdfGenerationPurchaseMenubuttonOnclick(ActionEvent event) {
+    private void pdfGenerationPurchaseMenubuttonOnclick(ActionEvent event) throws FileNotFoundException {
+        List<PurchaseData> purchaseDataList = PurchaseDataFileHandling.loadPurchaseData();
+        String pdfFilePath = "purchase_report.pdf"; // Change this to your desired output file path
+        
+        PDFGenerator.generatePurchasePDF(purchaseDataList, pdfFilePath);
     }
 
     @FXML
