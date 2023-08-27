@@ -4,17 +4,7 @@
  */
 package logintestapplicationMainPkg;
 
-//import java.io.IOException;
-//import java.io.ObjectOutputStream;
-//import java.io.OutputStream;
-//
-///**
-// *
-// * @author calcifer
-// */
-//public class AppendableObjectOutputStream {
-//    
-//}
+
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;

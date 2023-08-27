@@ -29,6 +29,7 @@ public class Generator implements Serializable{
     private Boolean isFunctional;
     private Boolean isRenewable;
     private Boolean isPurchaseApproved;
+    private Integer price;
     
 
     public Generator(Integer id, String type, Integer power) {
@@ -37,7 +38,22 @@ public class Generator implements Serializable{
         this.power = power;
         this.isOn = true;
         this.isFunctional = true;
-        this.isPurchaseApproved=true;
+        this.isPurchaseApproved=false;
+        if (type.equals("Solar")){
+            
+            
+            this.price=12300;
+        
+        
+        } else if(type.equals("Turbine")){
+        
+            this.price=154000;
+        
+        } else{
+        
+            this.price= 80700;
+        
+        }
         if(type.equals("Solar")||(type.equals("Turbine"))){
             
             this.isRenewable=true;
@@ -107,8 +123,10 @@ public class Generator implements Serializable{
 
     @Override
     public String toString() {
-        return "Generator{" + "id=" + id + ", type=" + type + ", power=" + power + ", isOn=" + isOn + ", isFunctional=" + isFunctional + ", isRenewable=" + isRenewable + ", isPurchaseApproved=" + isPurchaseApproved + '}';
+        return "Generator{" + "id=" + id + ", type=" + type + ", power=" + power + ", isOn=" + isOn + ", isFunctional=" + isFunctional + ", isRenewable=" + isRenewable + ", isPurchaseApproved=" + isPurchaseApproved + ", price=" + price + '}';
     }
+
+   
 
 
     

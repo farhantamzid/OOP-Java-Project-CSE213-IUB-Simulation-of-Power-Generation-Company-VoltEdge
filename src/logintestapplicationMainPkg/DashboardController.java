@@ -26,9 +26,6 @@ public class DashboardController implements Initializable {
     @FXML
     private BorderPane borderPaneId;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -39,10 +36,10 @@ public class DashboardController implements Initializable {
     private void SelectUserCustomer(ActionEvent event) throws IOException{
         Parent CustomerDashboardViewParent = FXMLLoader.load(getClass().getResource("CustomerDashboard.fxml"));
         Scene CustomerDashboardViewScene = new Scene(CustomerDashboardViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
         Stage newWindow  = new Stage();
         
-        newWindow.setTitle("Customer");
+        newWindow.setTitle("Customer Dashboard");
         newWindow.setScene(CustomerDashboardViewScene);
         newWindow.show();
     }
@@ -51,37 +48,42 @@ public class DashboardController implements Initializable {
     private void SelectUserFinance(ActionEvent event) throws IOException {
         Parent FinancemanagerDashboardViewParent = FXMLLoader.load(getClass().getResource("FinancemanagerDashboard.fxml"));
         Scene FinancemanagerDashboardViewScene = new Scene(FinancemanagerDashboardViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
         Stage newWindow  = new Stage();
         
-        newWindow.setTitle("Customer");
+        newWindow.setTitle("Finance Dashboard");
         newWindow.setScene(FinancemanagerDashboardViewScene);
         newWindow.show();
     }
 
     @FXML
-    private void SelectUserHRM(ActionEvent event) {
+    private void SelectUserHRM(ActionEvent event) throws IOException {
+        Parent HrmDashboardViewParent = FXMLLoader.load(getClass().getResource("HrmDashboard.fxml"));
+        Scene HrmDashboardViewScene = new Scene(HrmDashboardViewParent);
+        
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("HRM Dashboard");
+        newWindow.setScene(HrmDashboardViewScene);
+        newWindow.show();
     }
 
     @FXML
     private void SelectUserEngineer(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("EngineerDashboard.fxml"));
-        Parent EngineerDashboardViewParent = loader.load();
+        Parent EngineerDashboardViewParent = FXMLLoader.load(getClass().getResource("EngineerDashboard.fxml"));
         Scene EngineerDashboardViewScene = new Scene(EngineerDashboardViewParent);
-
-        // Get the reference to the root of the FXML file
-        Parent root = borderPaneId.getScene().getRoot();
-
-        // Set the new scene in the existing window
-        Stage window = (Stage) root.getScene().getWindow();
-        window.setScene(EngineerDashboardViewScene);
+        
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("Engineer Dashboard");
+        newWindow.setScene(EngineerDashboardViewScene);
+        newWindow.show();
     }
-
     @FXML
     private void SelectECO(ActionEvent event) throws IOException{
         Parent EcoLandingPageViewParent = FXMLLoader.load(getClass().getResource("/sceneECO/LandingPageECO.fxml"));
         Scene EcoLandingPageViewScene = new Scene(EcoLandingPageViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Environment Compliance Officer");
@@ -95,7 +97,7 @@ public class DashboardController implements Initializable {
     private void SelectDataAnalyst(ActionEvent event) throws IOException {
         Parent CustomerDashboardViewParent = FXMLLoader.load(getClass().getResource("/sceneDataAnalyst/LandingPageDataAnalyst.fxml"));
         Scene CustomerDashboardViewScene = new Scene(CustomerDashboardViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Data Analyst");

@@ -56,7 +56,16 @@ public class FinancemanagerDashboardController implements Initializable {
 
 
     @FXML
-    private void onActionPurchaseRequests(ActionEvent event) {
+    private void onActionPurchaseRequests(ActionEvent event) throws IOException {
+        
+        Parent purchaseRequestApprovalDenialViewParent = FXMLLoader.load(getClass().getResource("purchaseRequestApprovalDenial.fxml"));
+        Scene purchaseRequestApprovalDenialViewScene = new Scene(purchaseRequestApprovalDenialViewParent);
+
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("Approve or deny purchase");
+        newWindow.setScene(purchaseRequestApprovalDenialViewScene);
+        newWindow.show();
     }
 
     @FXML
