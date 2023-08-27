@@ -17,10 +17,10 @@ public class RepairRequest implements Serializable {
         return "RepairRequest{" + "repairType=" + repairType + ", repairDescription=" + repairDescription + ", repairStatus=" + repairStatus + '}';
     }
 
-    public RepairRequest(String repairType, String repairDescription, boolean repairStatus) {
+    public RepairRequest(String repairType, String repairDescription) {
         this.repairType = repairType;
         this.repairDescription = repairDescription;
-        this.repairStatus = repairStatus;
+        this.repairStatus = false;
     }
 
     public String getRepairType() {

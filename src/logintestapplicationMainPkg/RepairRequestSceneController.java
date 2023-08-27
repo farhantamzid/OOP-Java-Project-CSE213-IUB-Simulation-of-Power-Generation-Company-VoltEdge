@@ -35,7 +35,7 @@ public class RepairRequestSceneController implements Initializable {
         String repairType = comboboxRepairType.getValue();
         String repairDescription = DescriptionTextarea.getText();
 
-        RepairRequest newRepairRequest = new RepairRequest(repairType, repairDescription, false);
+        RepairRequest newRepairRequest = new RepairRequest(repairType, repairDescription);
         repairRequests.add(newRepairRequest);
 
         RepairRequestFileHandling.saveRepairRequests(repairRequests);

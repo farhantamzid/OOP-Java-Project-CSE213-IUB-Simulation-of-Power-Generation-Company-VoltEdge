@@ -32,16 +32,10 @@
                 <MenuItem mnemonicParsing="false" onAction="#onActionPurchaseRequests" text="Equipment Purchase Requests" />
               </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Salary Payout">
+            <Menu mnemonicParsing="false" text="Income Statement">
               <items>
-                <MenuItem mnemonicParsing="false" onAction="#onActionApproveSalary" text="Approve Salary" />
-                  <MenuItem mnemonicParsing="false" onAction="#OnActionSalaryReport" text="Generate Salary Report" />
-                  <Menu mnemonicParsing="false" text="Income Statement">
-                    <items>
-                      <MenuItem mnemonicParsing="false" onAction="#OnActionVIewIncomeStatement" text="View Income Statement" />
-                        <MenuItem mnemonicParsing="false" onAction="#OnActionIncomeStatementGeneration" text="Generate Income Statement Report" />
-                    </items>
-                  </Menu>
+                <MenuItem mnemonicParsing="false" onAction="#OnActionVIewIncomeStatement" text="View Income Statement" />
+                  <MenuItem mnemonicParsing="false" onAction="#OnActionIncomeStatementGeneration" text="Generate Income Statement Report" />
               </items>
             </Menu>
          </menus>

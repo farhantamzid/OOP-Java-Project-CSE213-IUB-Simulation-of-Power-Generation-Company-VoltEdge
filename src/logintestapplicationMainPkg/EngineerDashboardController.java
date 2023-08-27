@@ -129,6 +129,20 @@ public class EngineerDashboardController implements Initializable {
         newWindow.setScene(viewRepairHistorySceneViewScene);
         newWindow.show();
     }
+
+    @FXML
+    private void confirmServiceRequestButtonOnClick(ActionEvent event) throws IOException {
+        
+        Parent ConfirmServiceRequestSceneViewParent = FXMLLoader.load(getClass().getResource("ConfirmServiceRequestScene.fxml"));
+        Scene ConfirmServiceRequestSceneViewScene = new Scene(ConfirmServiceRequestSceneViewParent);
+        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("Customer");
+        newWindow.setScene(ConfirmServiceRequestSceneViewScene);
+        newWindow.show();
+        
+    }
         
     }
     

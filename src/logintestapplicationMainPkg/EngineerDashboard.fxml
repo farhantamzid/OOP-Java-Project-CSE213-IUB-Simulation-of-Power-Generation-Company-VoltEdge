@@ -38,10 +38,9 @@
                   <MenuItem mnemonicParsing="false" onAction="#showRepairHistoryButtonOnClick" text="Show Repair History" />
                </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Show Graphs and Charts">
+            <Menu mnemonicParsing="false" text="Customer Service Request">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Show energy BarChart" />
-                  <MenuItem mnemonicParsing="false" text="Show Connection Charts" />
+                  <MenuItem mnemonicParsing="false" onAction="#confirmServiceRequestButtonOnClick" text="Confirm Service Request" />
                </items>
             </Menu>
          </menus>
