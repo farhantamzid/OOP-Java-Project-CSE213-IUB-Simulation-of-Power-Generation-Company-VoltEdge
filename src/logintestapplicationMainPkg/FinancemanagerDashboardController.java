@@ -68,33 +68,4 @@ public class FinancemanagerDashboardController implements Initializable {
     private void OnActionIncomeStatementGeneration(ActionEvent event) {
     }
 
-    @FXML
-    private void giveAttendance(ActionEvent event) {
-        financeManager.markAttendance();
-        System.out.println("Attendance marked for FinanceManager: " + financeManager.getName());
-    }
-
-    @FXML
-private void showAttendanceRecords(ActionEvent event) {
-    List<Attendance> attendanceRecords = AttendanceFileHandler.readAttendanceRecords();
-
-    if (attendanceRecords.isEmpty()) {
-        System.out.println("No attendance records found.");
-        return;
-    }
-
-    System.out.println("Attendance Records:");
-    for (Attendance record : attendanceRecords) {
-        User user = record.getEmployee();
-        if (user instanceof Employee) {
-            Employee employee = (Employee) user;
-
-            System.out.println("Employee Name: " + employee.getName() +
-                               ", Employee ID: " + employee.getId() +
-                               ", Designation: " + employee.getDesignation() +
-                               ", Salary: " + employee.getSalary() +
-                               ", Attendance Date: " + record.getAttendanceDate());
-        }
-    }
-}
 }

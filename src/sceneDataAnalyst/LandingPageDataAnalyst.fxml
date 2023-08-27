@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="632.0" prefWidth="907.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sceneDataAnalyst.DataAnalystLandingPageController">
+    <children>
+        <MenuBar layoutY="7.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Input Data">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#OnActionFuelCost" text="Fuel Cost and Usage " />
+                        <MenuItem mnemonicParsing="false" onAction="#OnActionOperationalTrendAnalysis" text="Operational Trend Analysis" />
+                        <MenuItem mnemonicParsing="false" onAction="#OnActionMaintenanceLog" text="Maintenance Log Management " />
+                        <MenuItem mnemonicParsing="false" onAction="#OnActionEquimentrepair" text="Equipment Repairs and Replacements " />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Generate Reports">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#OnActionTableFuelCost" text="Table Fuel Cost and time" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Monitor">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#OnActionMetricsBarChart" text="Bar Chart Operational Trend Analysis " />
+                        <MenuItem mnemonicParsing="false" onAction="#OnActionchartMaintenance" text="Line Chart Maintenance Log Management" />
+                        <MenuItem mnemonicParsing="false" onAction="#OnActionchartEquipment" text="Equipment Repairs" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Label layoutX="68.0" layoutY="200.0" prefHeight="233.0" prefWidth="759.0" style="-fx-background-color: white;" text="Welcome to Data Analyst Dashboard Scene for Power Generation Company" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
