@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="467.0" prefWidth="687.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="logintestapplicationMainPkg.EngineerPurchaseRequestSceneController">
+   <children>
+      <Text layoutX="119.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apply for Purchase of New Generator">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="66.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="generatorTypeComboBox" layoutX="344.0" layoutY="137.0" prefHeight="25.0" prefWidth="171.0" promptText="Select Generator Type" />
+      <Text layoutX="66.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Id:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="generatorIdTextField" layoutX="344.0" layoutY="178.0" promptText="Enter Generator ID" />
+      <Text layoutX="66.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Power Generation Capacity (mWh):" wrappingWidth="270.48291015625">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="generatorCapacityTextField" layoutX="344.0" layoutY="221.0" promptText="Enter mWh" />
+      <Button layoutX="190.0" layoutY="322.0" mnemonicParsing="false" onAction="#submitPurchaseRequestButtonOnClick" text="Submit Purchase Request">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

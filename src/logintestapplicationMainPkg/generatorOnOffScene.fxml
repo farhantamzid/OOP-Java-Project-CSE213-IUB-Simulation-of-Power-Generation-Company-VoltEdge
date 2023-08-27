@@ -4,10 +4,9 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="535.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logintestapplicationMainPkg.generatorOnOffScene">
+<AnchorPane id="AnchorPane" prefHeight="535.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logintestapplicationMainPkg.generatorOnOffSceneController">
    <children>
       <TableView fx:id="equipmentTable" layoutX="51.0" layoutY="49.0" prefHeight="437.0" prefWidth="500.0">
         <columns>
@@ -22,6 +21,5 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <BorderPane fx:id="borderPaneId" prefHeight="535.0" prefWidth="794.0" />
    </children>
 </AnchorPane>

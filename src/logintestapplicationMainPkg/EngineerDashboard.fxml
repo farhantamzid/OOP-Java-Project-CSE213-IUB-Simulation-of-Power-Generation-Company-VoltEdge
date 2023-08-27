@@ -9,34 +9,33 @@
 
 <AnchorPane id="AnchorPane" prefHeight="632.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logintestapplicationMainPkg.EngineerDashboardController">
    <children>
-      <MenuBar layoutY="7.0" prefHeight="25.0" prefWidth="620.0">
+      <MenuBar layoutY="7.0" prefHeight="25.0" prefWidth="887.0">
          <menus>
             <Menu mnemonicParsing="false" text="Manage Equipments">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#generatorOffButtonOnClick" text="Turn Turbines on or off" />
                </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="PayBill">
+            <Menu mnemonicParsing="false" text="Purchase Request">
               <items>
-                <MenuItem mnemonicParsing="false" text="PayBill" />
+                <MenuItem mnemonicParsing="false" onAction="#applyForNewGeneratorButtonOnClick" text="Apply for new generator" />
               </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Purchase History">
+            <Menu mnemonicParsing="false" text="Live Generation Info">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Show Transaction History" />
-                  <MenuItem mnemonicParsing="false" text="GeneratePDF" />
+                  <MenuItem mnemonicParsing="false" onAction="#showLiveButtonOnClick" text="Show Live Energy Generation Info" />
                </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Connections">
+            <Menu mnemonicParsing="false" text="View Chart">
               <items>
-                <MenuItem mnemonicParsing="false" text="Apply For New Connection" />
-                  <MenuItem mnemonicParsing="false" text="View All connections" />
+                <MenuItem mnemonicParsing="false" onAction="#viewChartButtonOnClick" text="View Power Generation Distribution Bar Chart" />
               </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Repair Service">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Request Repair" />
-                  <MenuItem mnemonicParsing="false" text="Check Repair History" />
+                  <MenuItem mnemonicParsing="false" onAction="#flagForRepairButtonOnClick" text="Flag For Repair" />
+                  <MenuItem mnemonicParsing="false" onAction="#confirmRepairButtonOnClick" text="Confirm Repair" />
+                  <MenuItem mnemonicParsing="false" onAction="#showRepairHistoryButtonOnClick" text="Show Repair History" />
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Show Graphs and Charts">

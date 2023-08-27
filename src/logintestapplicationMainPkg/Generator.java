@@ -27,14 +27,26 @@ public class Generator implements Serializable{
     private Integer power;
     private Boolean isOn;
     private Boolean isFunctional;
+    private Boolean isRenewable;
+    private Boolean isPurchaseApproved;
     
 
-    public Generator(Integer id, String type, Integer power, Boolean isOn) {
+    public Generator(Integer id, String type, Integer power) {
         this.id = id;
         this.type=type;
         this.power = power;
-        this.isOn = isOn;
+        this.isOn = true;
         this.isFunctional = true;
+        this.isPurchaseApproved=true;
+        if(type.equals("Solar")||(type.equals("Turbine"))){
+            
+            this.isRenewable=true;
+        
+        } else{
+            
+            this.isRenewable=false;
+        
+        }
     }
 
     public Integer getId() {
@@ -77,22 +89,42 @@ public class Generator implements Serializable{
         this.isFunctional = isFunctional;
     }
 
+    public Boolean getIsRenewable() {
+        return isRenewable;
+    }
+
+    public void setIsRenewable(Boolean isRenewable) {
+        this.isRenewable = isRenewable;
+    }
+
+    public Boolean getIsPurchaseApproved() {
+        return isPurchaseApproved;
+    }
+
+    public void setIsPurchaseApproved(Boolean isPurchaseApproved) {
+        this.isPurchaseApproved = isPurchaseApproved;
+    }
+
     @Override
     public String toString() {
-        return "id=" + id + ", power=" + power + ", isOn=" + isOn + ", isFunctional=" + isFunctional;
+        return "Generator{" + "id=" + id + ", type=" + type + ", power=" + power + ", isOn=" + isOn + ", isFunctional=" + isFunctional + ", isRenewable=" + isRenewable + ", isPurchaseApproved=" + isPurchaseApproved + '}';
     }
+
+
     
-    public static void newTurbine(Integer id, String type, Integer power, Boolean isON, Boolean isFunctional){
+    
+    
+    public static void newTurbine(Integer id, String type, Integer power){
         
         ArrayList<Generator> loadedGeneratorList = readFromBin();
         boolean isDuplicate;
         isDuplicate = loadedGeneratorList.stream().anyMatch(connection -> connection.getId().equals(id));
         if (isDuplicate) {
-            System.out.println("Same id");
+            alert.show("Duplicate ID. Please enter a unique one.");
             return;
         }
         
-        Generator g1 = new Generator(id,type,power,isON);
+        Generator g1 = new Generator(id,type,power);
         Generator.writeToBin(g1);
         
     
@@ -151,6 +183,23 @@ public class Generator implements Serializable{
         
         return generatorList;
     }
+    
+public static void writeToBin(ArrayList<Generator> generators) {
+    File file = new File("Generators.bin");
+    
+    try (FileOutputStream fos = new FileOutputStream(file);
+         ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+
+        for (Generator g : generators) {
+            oos.writeObject(g);
+        }
+        
+    } catch (IOException e) {
+        System.err.println("IO exception: " + e.getMessage());
+    }
+}
+
+
     
     public static void showGenerators(){
         for (Generator g : Generator.readFromBin()){

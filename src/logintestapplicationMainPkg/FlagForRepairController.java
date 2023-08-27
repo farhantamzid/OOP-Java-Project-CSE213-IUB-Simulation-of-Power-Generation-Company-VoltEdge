@@ -6,6 +6,7 @@ package logintestapplicationMainPkg;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,33 +20,30 @@ import javafx.scene.control.cell.PropertyValueFactory;
  *
  * @author farhan
  */
-public class generatorOnOffSceneController implements Initializable {
+public class FlagForRepairController implements Initializable {
     
     private ArrayList<Generator> generatorList;
 
     @FXML
-    private TableColumn<Generator, Integer> id;
+    private TableView<Generator> flagTableView;
     @FXML
-    private TableColumn<Generator, String> name;
+    private TableColumn<Generator, Integer> flagIdColumn;
     @FXML
-    private TableColumn<Generator, Integer> power;
+    private TableColumn<Generator, String> flagTypeColumn;
     @FXML
-    private TableColumn<Generator, Boolean> status;
-    @FXML
-    private TableView<Generator> equipmentTable;
+    private TableColumn<Generator, Boolean> flagStatusColumn;
 
     /**
      * Initializes the controller class.
-     * @param url
-     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        id.setCellValueFactory(new PropertyValueFactory<>("id"));
-        name.setCellValueFactory(new PropertyValueFactory<>("type"));
-        power.setCellValueFactory(new PropertyValueFactory<>("power"));
-        status.setCellValueFactory(new PropertyValueFactory<>("isOn"));
+                
+        flagIdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        flagTypeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
+        
+        flagStatusColumn.setCellValueFactory(new PropertyValueFactory<>("isOn"));
         
         
 
@@ -59,7 +57,7 @@ public class generatorOnOffSceneController implements Initializable {
             
             if (g.getIsPurchaseApproved()&&(g.getIsFunctional())){
                 
-                equipmentTable.getItems().add(g);
+                flagTableView.getItems().add(g);
                 
             }
             
@@ -73,38 +71,39 @@ public class generatorOnOffSceneController implements Initializable {
         
         
         
+      
+        
+        
         // TODO
     }    
 
 @FXML
-private void onOffButton(ActionEvent event) {
-    Generator selectedGenerator = equipmentTable.getSelectionModel().getSelectedItem();
-    
-    if (selectedGenerator != null) {
-        // Perform actions on the selectedGenerator, e.g., toggle its status
-        boolean currentStatus = selectedGenerator.getIsOn();
-        selectedGenerator.setIsOn(!currentStatus);
-        
+private void flagButtonOnClick(ActionEvent event) {
+    Generator selectedGenerator = flagTableView.getSelectionModel().getSelectedItem();
+
+    if (selectedGenerator != null && selectedGenerator.getIsFunctional()) {
+        // Perform actions on the selectedGenerator
+        selectedGenerator.setIsFunctional(false);
+
         // Refresh the TableView to reflect the changes
-        equipmentTable.refresh();
         
+
         // Update the corresponding data in your ArrayList (if needed)
-        int selectedIndex = equipmentTable.getSelectionModel().getSelectedIndex();
+        int selectedIndex = flagTableView.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
             generatorList.set(selectedIndex, selectedGenerator);
         }
-        
-        // You might want to save the updated data back to your source (e.g., binary file) here
+
+        // Save the updated data back to your source (e.g., binary file)
         Generator.writeToBin(generatorList);
+
+        // Show updated generator information
+
     }
 
-            
-            
-        
-        
-        }
+    
     
 }
 
     
-
+}

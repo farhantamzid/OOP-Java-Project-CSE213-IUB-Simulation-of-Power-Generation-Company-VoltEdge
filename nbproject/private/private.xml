@@ -2,37 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/generatorOnOffScene.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/Generator.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/RepairRequestSceneController.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/RepairRequest.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/PurchaseData.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/EnergyPurchaseService.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/Employee.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/RegistrationHandler.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/CustomerBuyRenewableController.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/FinanceManager.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/ConnectionApplyDashboardController.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/generatorOnOffSceneController.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/EngineerDashboard.fxml</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/CustomerDashboardController.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/DashboardController.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/PurchaseDataFileHandling.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/Connection.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/ConnectionTableViewController.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/EngineerDashboardController.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/FXMLController.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/PurchaseTableView.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/ConnectionFileHandling.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/RepairRequestSceneController.fxml</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/AttendanceFileHandler.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/CustomerPurchaseTable.fxml</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/RepairRequestFileHandling.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/RenewableElectricity.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/CustomerPurchaseTableController.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/HRM.java</file>
-            <file>file:/C:/Users/User/Desktop/OOP-Java-Project-CSE213-IUB-Simulation-of-Power-Generation-Company-VoltEdge/src/logintestapplicationMainPkg/CustomerDashboard.fxml</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
