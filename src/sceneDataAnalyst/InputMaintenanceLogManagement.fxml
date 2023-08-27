@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="694.0" prefWidth="1098.0" xmlns="http://javafx.com/javafx/8.0.171" 
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sceneDataAnalyst.InputMaintenanceLogManagementController">
+   <children>
+      <Label layoutX="70.0" layoutY="47.0" prefHeight="147.0" prefWidth="759.0" text="Welcome to Data Analysis Maintenance Log Management Data for Power Generation Company" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="376.0" text="Technicians ID:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="194.0" text="Maintenance ID:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="235.0" text="Equipment ID:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="99.0" layoutY="414.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="fxidHour" layoutX="41.0" layoutY="414.0" text="Duration (Hours):">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fxidTechniciansID" layoutX="232.0" layoutY="374.0" prefHeight="31.0" prefWidth="261.0" />
+      <DatePicker fx:id="fxiddate" layoutX="225.0" layoutY="286.0" prefHeight="27.0" prefWidth="261.0" />
+      <Button layoutX="773.0" layoutY="169.0" mnemonicParsing="false" onAction="#OnActionSubmit" prefHeight="72.0" prefWidth="161.0" text="Submit">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Line endX="152.0" endY="422.0" layoutX="574.0" layoutY="246.0" startX="152.0" startY="-76.0" />
+      <Label layoutX="39.0" layoutY="335.0" text="Type of Maintenance :">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="545.0" text="Description:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fxidMaintenanceID" layoutX="225.0" layoutY="192.0" prefHeight="31.0" prefWidth="261.0" />
+      <TextField fx:id="fxidEquipmentID" layoutX="225.0" layoutY="230.0" prefHeight="38.0" prefWidth="261.0" />
+      <TextField fx:id="fxidtypeMain" layoutX="232.0" layoutY="330.0" prefHeight="38.0" prefWidth="261.0" />
+      <TextField fx:id="fxidDowntimeDuration" layoutX="232.0" layoutY="412.0" prefHeight="31.0" prefWidth="261.0" />
+      <Label layoutX="40.0" layoutY="288.0" text="Date of Submission:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="fxidDES" layoutX="230.0" layoutY="496.0" prefHeight="125.0" prefWidth="415.0" />
+      <Label layoutX="41.0" layoutY="458.0" text="Spare Parts Used:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fxidSparePart" layoutX="232.0" layoutY="456.0" prefHeight="31.0" prefWidth="261.0" />
+   </children>
+</AnchorPane>

@@ -11,12 +11,6 @@ public class FinanceManager extends Employee implements Serializable {
         super(designation, salary, attendance, applyforleave, email, password, name, dob, id);
     }
     
-    public void markAttendance() {
-        LocalDateTime currentTime = LocalDateTime.now();
-        Attendance attendanceRecord = new Attendance(this, currentTime);
-        // Save attendance record to a binary file
-        AttendanceFileHandler.saveAttendanceRecord(attendanceRecord);
-        this.attendance = true;
-    }
+
 }
 

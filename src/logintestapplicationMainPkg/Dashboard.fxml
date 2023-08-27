@@ -15,7 +15,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="Select User">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#SelectUserAdmin" text="Admin" />
+              <MenuItem mnemonicParsing="false" onAction="#SelectDataAnalyst" text="Data Analyst" />
                   <MenuItem mnemonicParsing="false" onAction="#SelectUserCustomer" text="Customer" />
                   <MenuItem mnemonicParsing="false" onAction="#SelectUserFinance" text="Finance" />
                   <MenuItem mnemonicParsing="false" onAction="#SelectUserHRM" text="Human Resourse Manager" />

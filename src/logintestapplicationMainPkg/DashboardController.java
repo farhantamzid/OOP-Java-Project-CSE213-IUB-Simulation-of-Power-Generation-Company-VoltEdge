@@ -34,9 +34,6 @@ public class DashboardController implements Initializable {
         // TODO
     }    
 
-    @FXML
-    private void SelectUserAdmin(ActionEvent event) {
-    }
 
     @FXML
     private void SelectUserCustomer(ActionEvent event) throws IOException{
@@ -82,7 +79,7 @@ public class DashboardController implements Initializable {
 
     @FXML
     private void SelectECO(ActionEvent event) throws IOException{
-        Parent EcoLandingPageViewParent = FXMLLoader.load(getClass().getResource("ECOLandingPage.fxml"));
+        Parent EcoLandingPageViewParent = FXMLLoader.load(getClass().getResource("/sceneECO/LandingPageECO.fxml"));
         Scene EcoLandingPageViewScene = new Scene(EcoLandingPageViewParent);
         //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage newWindow  = new Stage();
@@ -93,5 +90,18 @@ public class DashboardController implements Initializable {
         
         
     }
-    
-}
+
+    @FXML
+    private void SelectDataAnalyst(ActionEvent event) throws IOException {
+        Parent CustomerDashboardViewParent = FXMLLoader.load(getClass().getResource("/sceneDataAnalyst/LandingPageDataAnalyst.fxml"));
+        Scene CustomerDashboardViewScene = new Scene(CustomerDashboardViewParent);
+        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("Data Analyst");
+        newWindow.setScene(CustomerDashboardViewScene);
+        newWindow.show();
+    }
+        
+        
+    }
