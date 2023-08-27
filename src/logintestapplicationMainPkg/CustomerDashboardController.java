@@ -160,7 +160,16 @@ public class CustomerDashboardController implements Initializable {
     }
 
     @FXML
-    private void showRepairHistoryMenuOnAction(ActionEvent event) {
+    private void showRepairHistoryMenuOnAction(ActionEvent event) throws IOException {
+        Parent ShowRepairHistoryParent = FXMLLoader.load(getClass().getResource("ConfirmedRepairs.fxml"));
+        Scene ShowRepairHistoryScene = new Scene(ShowRepairHistoryParent);
+        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("Repair History");
+        newWindow.setScene(ShowRepairHistoryScene);
+        newWindow.show();
+        
     }
 
     @FXML
