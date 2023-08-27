@@ -94,7 +94,7 @@ private void onOffButton(ActionEvent event) {
             generatorList.set(selectedIndex, selectedGenerator);
         }
         
-        // You might want to save the updated data back to your source (e.g., binary file) here
+
         Generator.writeToBin(generatorList);
     }
 

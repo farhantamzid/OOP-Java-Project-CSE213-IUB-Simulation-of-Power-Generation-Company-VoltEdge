@@ -63,7 +63,15 @@ public class DashboardController implements Initializable {
     }
 
     @FXML
-    private void SelectUserHRM(ActionEvent event) {
+    private void SelectUserHRM(ActionEvent event) throws IOException {
+        Parent HrmDashboardViewParent = FXMLLoader.load(getClass().getResource("HrmDashboard.fxml"));
+        Scene HrmDashboardViewScene = new Scene(HrmDashboardViewParent);
+        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("HRM Dashboard");
+        newWindow.setScene(HrmDashboardViewScene);
+        newWindow.show();
     }
 
     @FXML
