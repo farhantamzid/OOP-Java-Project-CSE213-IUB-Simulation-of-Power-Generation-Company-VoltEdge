@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="482.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logintestapplicationMainPkg.ExpanseTableViewController">
+   <children>
+      <TableView fx:id="expanseTableView" layoutX="108.0" layoutY="128.0" prefHeight="340.0" prefWidth="365.0">
+        <columns>
+          <TableColumn fx:id="rentType" prefWidth="182.0" text="Type" />
+          <TableColumn fx:id="rentAmount" minWidth="0.0" prefWidth="182.0" text="Amount BDT" />
+        </columns>
+      </TableView>
+      <Label layoutX="27.0" layoutY="52.0" text="Total Expanse :" />
+   </children>
+</AnchorPane>

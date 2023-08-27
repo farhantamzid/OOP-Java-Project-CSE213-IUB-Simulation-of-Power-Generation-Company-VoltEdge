@@ -1,0 +1,3 @@
+1200,Office bill
+3500000,Office rent 
+350000,parking rent 

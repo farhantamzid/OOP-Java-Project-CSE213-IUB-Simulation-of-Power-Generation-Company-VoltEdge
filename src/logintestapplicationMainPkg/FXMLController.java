@@ -28,11 +28,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-/**
- * FXML Controller class
- *
- * @author farhan
- */
+
+
 public class FXMLController implements Initializable {
     @FXML
     private BorderPane borderPaneId;

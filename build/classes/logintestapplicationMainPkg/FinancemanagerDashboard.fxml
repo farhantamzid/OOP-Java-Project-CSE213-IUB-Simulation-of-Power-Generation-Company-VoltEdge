@@ -25,7 +25,6 @@
             <Menu mnemonicParsing="false" text="View Expense ">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#OnActionExpenseReport" text="Show Expense Report" />
-                  <MenuItem mnemonicParsing="false" onAction="#OnActionExpenseReportPiechart" text="Show Expense History PieChart" />
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Requests Approval">
@@ -52,8 +51,8 @@
             <Font name="System Bold" size="44.0" />
          </font>
       </Label>
-      <Button layoutX="100.0" layoutY="100.0" mnemonicParsing="false" text="Give Attendance" onAction="#giveAttendance"/>
-      <Button layoutX="200.0" layoutY="150.0" mnemonicParsing="false" text="Show Attendance Records" onAction="#showAttendanceRecords"/>
+      <Button layoutX="100.0" layoutY="100.0" mnemonicParsing="false" onAction="#giveAttendance" text="Give Attendance" />
+      <Button layoutX="200.0" layoutY="150.0" mnemonicParsing="false" onAction="#showAttendanceRecords" text="Show Attendance Records" />
 
    </children>   
 </AnchorPane>
