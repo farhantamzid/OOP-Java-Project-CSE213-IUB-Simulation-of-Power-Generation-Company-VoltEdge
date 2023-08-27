@@ -1,16 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package logintestapplicationMainPkg;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 
-/**
- *
- * @author User
- */
+
 public class Connection implements Serializable{
     private String connectionplantName;
     private String connectionLocation;

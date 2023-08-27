@@ -22,9 +22,9 @@
                 <MenuItem mnemonicParsing="false" onAction="#payBillMenuOnaction" text="PayBill" />
               </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Purchase History">
+            <Menu mnemonicParsing="false" text="Unpaid Amount">
                <items>
-                  <MenuItem mnemonicParsing="false" onAction="#OnActionTransactionTable" text="Show Transaction History" />
+                  <MenuItem mnemonicParsing="false" onAction="#OnActionTransactionTable" text="Show  History" />
                   <MenuItem mnemonicParsing="false" onAction="#pdfGenerationPurchaseMenubuttonOnclick" text="GeneratePDF" />
                </items>
             </Menu>

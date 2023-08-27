@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author farhan
+ * @author user
  */
 public class DashboardController implements Initializable {
 
