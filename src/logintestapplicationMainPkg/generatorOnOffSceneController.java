@@ -81,14 +81,12 @@ private void onOffButton(ActionEvent event) {
     Generator selectedGenerator = equipmentTable.getSelectionModel().getSelectedItem();
     
     if (selectedGenerator != null) {
-        // Perform actions on the selectedGenerator, e.g., toggle its status
+
         boolean currentStatus = selectedGenerator.getIsOn();
         selectedGenerator.setIsOn(!currentStatus);
-        
-        // Refresh the TableView to reflect the changes
+
         equipmentTable.refresh();
-        
-        // Update the corresponding data in your ArrayList (if needed)
+
         int selectedIndex = equipmentTable.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
             generatorList.set(selectedIndex, selectedGenerator);
@@ -100,7 +98,7 @@ private void onOffButton(ActionEvent event) {
 
             
             
-        
+        Generator.showGenerators();
         
         }
     

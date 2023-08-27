@@ -6,7 +6,6 @@ package logintestapplicationMainPkg;
 
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,18 +19,15 @@ import javafx.scene.control.cell.PropertyValueFactory;
  *
  * @author farhan
  */
-public class FlagForRepairController implements Initializable {
-    
-    private ArrayList<Generator> generatorList;
+public class PurchaseRequestApprovalDenialController implements Initializable {
 
     @FXML
-    private TableView<Generator> flagTableView;
+    private TableView<Generator> purchaseReqTableView;
     @FXML
-    private TableColumn<Generator, Integer> flagIdColumn;
+    private TableColumn<Generator, String> type;
     @FXML
-    private TableColumn<Generator, String> flagTypeColumn;
-    @FXML
-    private TableColumn<Generator, Boolean> flagStatusColumn;
+    private TableColumn<Generator, Integer> price;
+    private ArrayList<Generator> generatorList;
 
     /**
      * Initializes the controller class.
@@ -39,11 +35,9 @@ public class FlagForRepairController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-                
-        flagIdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
-        flagTypeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
-        
-        flagStatusColumn.setCellValueFactory(new PropertyValueFactory<>("isOn"));
+        type.setCellValueFactory(new PropertyValueFactory<>("type"));
+        price.setCellValueFactory(new PropertyValueFactory<>("price"));
+
         
         
 
@@ -55,9 +49,9 @@ public class FlagForRepairController implements Initializable {
             
 
             
-            if (g.getIsPurchaseApproved()&&(g.getIsFunctional())){
+            if (g.getIsPurchaseApproved()==false){
                 
-                flagTableView.getItems().add(g);
+                purchaseReqTableView.getItems().add(g);
                 
             }
             
@@ -71,35 +65,42 @@ public class FlagForRepairController implements Initializable {
         
         
         
-      
+        // TODO
+        
         
         
         // TODO
     }    
 
-@FXML
-private void flagButtonOnClick(ActionEvent event) {
-    Generator selectedGenerator = flagTableView.getSelectionModel().getSelectedItem();
+    @FXML
+    private void approveButtonOnClick(ActionEvent event) {
+        
+        Generator selectedGenerator = purchaseReqTableView.getSelectionModel().getSelectedItem();
+    
+    if (selectedGenerator != null) {
 
-    if (selectedGenerator != null && selectedGenerator.getIsFunctional()) {
+        
+        selectedGenerator.setIsPurchaseApproved(true);
 
-        selectedGenerator.setIsFunctional(false);
+        purchaseReqTableView.refresh();
 
-
-        int selectedIndex = flagTableView.getSelectionModel().getSelectedIndex();
+        int selectedIndex = purchaseReqTableView.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
             generatorList.set(selectedIndex, selectedGenerator);
         }
-
+        
 
         Generator.writeToBin(generatorList);
-
-
     }
 
+            
+            
+        
+        
+        }
+        
     
-    
-}
+
 
     
 }

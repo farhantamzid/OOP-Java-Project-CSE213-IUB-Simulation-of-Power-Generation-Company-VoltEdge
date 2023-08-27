@@ -24,9 +24,7 @@ import javafx.stage.Stage;
  */
 public class CustomerDashboardController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -53,7 +51,7 @@ public class CustomerDashboardController implements Initializable {
                         
         Parent CustomerBuyNonRenewableViewParent = FXMLLoader.load(getClass().getResource("CustomerBuyNonRenewable.fxml"));
         Scene CustomerBuyNonRenewableViewScene = new Scene(CustomerBuyNonRenewableViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Buy Non-Renewable");
@@ -66,7 +64,7 @@ public class CustomerDashboardController implements Initializable {
                 
         Parent CustomerPurchaseTableViewParent = FXMLLoader.load(getClass().getResource("CustomerPurchaseTable.fxml"));
         Scene CustomerPurchaseTableViewScene = new Scene(CustomerPurchaseTableViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Purchase Table");
@@ -78,7 +76,7 @@ public class CustomerDashboardController implements Initializable {
                 
         Parent PieChartViewParent = FXMLLoader.load(getClass().getResource("PurchasedEnergyTypePieChart.fxml"));
         Scene PieChartViewScene = new Scene(PieChartViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Pie-Chart");
@@ -93,7 +91,7 @@ public class CustomerDashboardController implements Initializable {
     private void payBillMenuOnaction(ActionEvent event) throws IOException {
         Parent PayBillViewParent = FXMLLoader.load(getClass().getResource("PayBill.fxml"));
         Scene PayBillViewScene = new Scene(PayBillViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Connections");
@@ -106,7 +104,7 @@ public class CustomerDashboardController implements Initializable {
     private void newConncectionOnactionMenu(ActionEvent event) throws IOException {
         Parent ConnectionApplyDashboardViewParent = FXMLLoader.load(getClass().getResource("ConnectionApplyDashboard.fxml"));
         Scene ConnectionApplyDashboardViewScene = new Scene(ConnectionApplyDashboardViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Connections");
@@ -118,7 +116,7 @@ public class CustomerDashboardController implements Initializable {
     private void allConncectionOnactionMenu(ActionEvent event) throws IOException {
         Parent ConnectionTableViewParent = FXMLLoader.load(getClass().getResource("ConnectionTableView.fxml"));
         Scene ConnectionTableViewScene = new Scene(ConnectionTableViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Connections Table View");
@@ -130,7 +128,7 @@ public class CustomerDashboardController implements Initializable {
     private void repairRequestMenuOnAction(ActionEvent event) throws IOException {
         Parent RepairRequestViewParent = FXMLLoader.load(getClass().getResource("RepairRequestSceneController.fxml"));
         Scene RepairRequestViewScene = new Scene(RepairRequestViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Connections Table View");
@@ -143,7 +141,7 @@ public class CustomerDashboardController implements Initializable {
     private void OnActionConnectionPieChart(ActionEvent event) throws IOException {
         Parent ConnectionPieChartParent = FXMLLoader.load(getClass().getResource("ConnectionPieChart.fxml"));
         Scene ConnectionPieChartViewScene = new Scene(ConnectionPieChartParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+ 
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Connections Pie Chart");
@@ -154,7 +152,7 @@ public class CustomerDashboardController implements Initializable {
     @FXML
     private void pdfGenerationPurchaseMenubuttonOnclick(ActionEvent event) throws FileNotFoundException {
         List<PurchaseData> purchaseDataList = PurchaseDataFileHandling.loadPurchaseData();
-        String pdfFilePath = "purchase_report.pdf"; // Change this to your desired output file path
+        String pdfFilePath = "purchase_report.pdf"; 
         
         PDFGenerator.generatePurchasePDF(purchaseDataList, pdfFilePath);
     }
@@ -163,7 +161,7 @@ public class CustomerDashboardController implements Initializable {
     private void showRepairHistoryMenuOnAction(ActionEvent event) throws IOException {
         Parent ShowRepairHistoryParent = FXMLLoader.load(getClass().getResource("ConfirmedRepairs.fxml"));
         Scene ShowRepairHistoryScene = new Scene(ShowRepairHistoryParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Repair History");
@@ -176,7 +174,7 @@ public class CustomerDashboardController implements Initializable {
     private void OnActionEnergyBarChart(ActionEvent event) throws IOException {
         Parent EnergyBarChartParent = FXMLLoader.load(getClass().getResource("BarChartScene.fxml"));
         Scene EnergyBarChartScene = new Scene(EnergyBarChartParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Pie-Chart");

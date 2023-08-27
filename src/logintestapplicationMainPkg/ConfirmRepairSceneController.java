@@ -35,9 +35,6 @@ public class ConfirmRepairSceneController implements Initializable {
     @FXML
     private TextField issueTextField;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
@@ -71,8 +68,7 @@ public class ConfirmRepairSceneController implements Initializable {
         
         
         
-     
-        // TODO
+
     }    
 
     @FXML
@@ -86,29 +82,26 @@ public class ConfirmRepairSceneController implements Initializable {
         String remarks = remarksTextField.getText();
 
         if (issue.isEmpty() || downtimeStr.isEmpty() || remarks.isEmpty()) {
-            // Display an error message indicating missing fields
-            // Adjust the way you display the error message based on your UI framework
+
             alert.show("Please fill in all the fields");
             return;
         }
         RepairHistory.newRepair(selectedGenerator.getId(), selectedGenerator.getType(), issueTextField.getText(), Integer.parseInt(downtimeTextField.getText()), remarksTextField.getText());
 
-        // Perform actions on the selectedGenerator
+ 
         selectedGenerator.setIsFunctional(true);
 
-        // Refresh the TableView to reflect the changes
+
         confirmTableView.refresh();
 
-        // Update the corresponding data in your ArrayList (if needed)
         int selectedIndex = confirmTableView.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
             generatorList.set(selectedIndex, selectedGenerator);
         }
 
-        // Save the updated data back to your source (e.g., binary file)
+
         Generator.writeToBin(generatorList);
 
-        // Show updated generator information
         Generator.showGenerators();
     }
 

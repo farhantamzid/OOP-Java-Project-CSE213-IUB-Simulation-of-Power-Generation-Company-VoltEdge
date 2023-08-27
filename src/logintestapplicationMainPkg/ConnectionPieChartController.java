@@ -20,9 +20,7 @@ public class ConnectionPieChartController implements Initializable {
     @FXML
     private PieChart connectionLocationPiechart;
 
-    /**
-     * Initializes the controller class.
-     */
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ConnectionPieChartData.populatePieChart(connectionLocationPiechart);

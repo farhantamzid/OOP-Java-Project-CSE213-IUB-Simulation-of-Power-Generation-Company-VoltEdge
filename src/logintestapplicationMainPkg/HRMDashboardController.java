@@ -35,7 +35,7 @@ public class HRMDashboardController implements Initializable {
         
         Parent leaveRequestSceneViewParent = FXMLLoader.load(getClass().getResource("leaveRequestScene.fxml"));
         Scene leaveRequestSceneViewScene = new Scene(leaveRequestSceneViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Approve or Deny Leave");
@@ -52,7 +52,7 @@ public class HRMDashboardController implements Initializable {
     private void applyLeaveButtonOnClick(ActionEvent event) throws IOException {
         Parent applyLeaveSceneViewParent = FXMLLoader.load(getClass().getResource("applyLeaveScene.fxml"));
         Scene applyLeaveSceneViewScene = new Scene(applyLeaveSceneViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Apply for leave.");

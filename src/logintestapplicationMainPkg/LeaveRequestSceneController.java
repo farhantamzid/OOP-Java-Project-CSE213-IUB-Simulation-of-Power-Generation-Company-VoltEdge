@@ -83,20 +83,18 @@ public class LeaveRequestSceneController implements Initializable {
         leaveRequest selectedRequest = leaveTableView.getSelectionModel().getSelectedItem();
     
     if (selectedRequest != null) {
-        // Perform actions on the selectedGenerator, e.g., toggle its status
+
         
         selectedRequest.setIsApproved(true);
-        
-        // Refresh the TableView to reflect the changes
+
         leaveTableView.refresh();
         
-        // Update the corresponding data in your ArrayList (if needed)
+
         int selectedIndex = leaveTableView.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
             leaveList.set(selectedIndex, selectedRequest);
         }
-        
-        // You might want to save the updated data back to your source (e.g., binary file) here
+
         leaveRequest.writeToBin(leaveList);
     }
 
@@ -113,20 +111,18 @@ public class LeaveRequestSceneController implements Initializable {
          leaveRequest selectedRequest = leaveTableView.getSelectionModel().getSelectedItem();
     
     if (selectedRequest != null) {
-        // Perform actions on the selectedGenerator, e.g., toggle its status
-        
+
         selectedRequest.setIsApproved(false);
         
-        // Refresh the TableView to reflect the changes
+
         leaveTableView.refresh();
-        
-        // Update the corresponding data in your ArrayList (if needed)
+
         int selectedIndex = leaveTableView.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
             leaveList.set(selectedIndex, selectedRequest);
         }
         
-        // You might want to save the updated data back to your source (e.g., binary file) here
+
         leaveRequest.writeToBin(leaveList);
     }
 

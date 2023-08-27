@@ -26,9 +26,6 @@ public class EngineerDashboardController implements Initializable {
 
 
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -39,10 +36,10 @@ public class EngineerDashboardController implements Initializable {
         
         Parent generatorOnOffSceneViewParent = FXMLLoader.load(getClass().getResource("generatorOnOffScene.fxml"));
         Scene generatorOnOffSceneViewScene = new Scene(generatorOnOffSceneViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
-        newWindow.setTitle("Customer");
+        newWindow.setTitle("Manage Generator");
         newWindow.setScene(generatorOnOffSceneViewScene);
         newWindow.show();
         
@@ -57,10 +54,10 @@ public class EngineerDashboardController implements Initializable {
         
         Parent engineerPurchaseRequestSceneViewParent = FXMLLoader.load(getClass().getResource("engineerPurchaseRequestScene.fxml"));
         Scene engineerPurchaseRequestSceneViewScene = new Scene(engineerPurchaseRequestSceneViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
-        newWindow.setTitle("Customer");
+        newWindow.setTitle("Purchase Request");
         newWindow.setScene(engineerPurchaseRequestSceneViewScene);
         newWindow.show();
     }
@@ -70,7 +67,7 @@ public class EngineerDashboardController implements Initializable {
         
         Parent totalBeingGeneratedSceneViewParent = FXMLLoader.load(getClass().getResource("totalBeingGeneratedScene.fxml"));
         Scene totalBeingGeneratedSceneViewScene = new Scene(totalBeingGeneratedSceneViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
         newWindow.setTitle("Live Generation Info");
@@ -83,10 +80,10 @@ public class EngineerDashboardController implements Initializable {
         
         Parent powerGenerationDistributionBarChartSceneViewParent = FXMLLoader.load(getClass().getResource("powerGenerationDistributionBarChartScene.fxml"));
         Scene powerGenerationDistributionBarChartSceneViewScene = new Scene(powerGenerationDistributionBarChartSceneViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
-        newWindow.setTitle("Customer");
+        newWindow.setTitle("Bar Chart");
         newWindow.setScene(powerGenerationDistributionBarChartSceneViewScene);
         newWindow.show();
     }
@@ -96,10 +93,10 @@ public class EngineerDashboardController implements Initializable {
                 
         Parent flagForRepairViewParent = FXMLLoader.load(getClass().getResource("flagForRepair.fxml"));
         Scene flagForRepairViewScene = new Scene(flagForRepairViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
-        newWindow.setTitle("Customer");
+        newWindow.setTitle("Flag for Repair");
         newWindow.setScene(flagForRepairViewScene);
         newWindow.show();
     }
@@ -108,10 +105,10 @@ public class EngineerDashboardController implements Initializable {
     private void confirmRepairButtonOnClick(ActionEvent event) throws IOException {
         Parent ConfirmRepairSceneViewParent = FXMLLoader.load(getClass().getResource("ConfirmRepairScene.fxml"));
         Scene ConfirmRepairSceneViewScene = new Scene(ConfirmRepairSceneViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
-        newWindow.setTitle("Customer");
+        newWindow.setTitle("Confirm Repair");
         newWindow.setScene(ConfirmRepairSceneViewScene);
         newWindow.show();
     }
@@ -122,10 +119,10 @@ public class EngineerDashboardController implements Initializable {
         
         Parent viewRepairHistorySceneViewParent = FXMLLoader.load(getClass().getResource("viewRepairHistoryScene.fxml"));
         Scene viewRepairHistorySceneViewScene = new Scene(viewRepairHistorySceneViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
-        newWindow.setTitle("Customer");
+        newWindow.setTitle("Repair History");
         newWindow.setScene(viewRepairHistorySceneViewScene);
         newWindow.show();
     }
@@ -135,10 +132,10 @@ public class EngineerDashboardController implements Initializable {
         
         Parent ConfirmServiceRequestSceneViewParent = FXMLLoader.load(getClass().getResource("ConfirmServiceRequestScene.fxml"));
         Scene ConfirmServiceRequestSceneViewScene = new Scene(ConfirmServiceRequestSceneViewParent);
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         Stage newWindow  = new Stage();
         
-        newWindow.setTitle("Customer");
+        newWindow.setTitle("Customer Service Request");
         newWindow.setScene(ConfirmServiceRequestSceneViewScene);
         newWindow.show();
         

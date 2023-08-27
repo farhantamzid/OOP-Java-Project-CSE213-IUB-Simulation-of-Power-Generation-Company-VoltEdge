@@ -29,9 +29,7 @@ public class ConfirmServiceRequestSceneController implements Initializable {
     @FXML
     private TableColumn<RepairRequest, String> description;
 
-    /**
-     * Initializes the controller class.
-     */
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
@@ -66,8 +64,7 @@ public class ConfirmServiceRequestSceneController implements Initializable {
         
      
         
-        
-        // TODO
+
     }    
 
     @FXML
@@ -76,21 +73,18 @@ public class ConfirmServiceRequestSceneController implements Initializable {
             RepairRequest selectedGenerator = requestTableView.getSelectionModel().getSelectedItem();
     
     if (selectedGenerator != null) {
-        // Perform actions on the selectedGenerator, e.g., toggle its status
+
         boolean currentStatus = selectedGenerator.isRepairStatus();
         selectedGenerator.setRepairStatus(!currentStatus);
-        
-        // Refresh the TableView to reflect the changes
         requestTableView.refresh();
-        
-        // Update the corresponding data in your ArrayList (if needed)
+
         int selectedIndex = requestTableView.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
             repairRequestList.set(selectedIndex, selectedGenerator);
         }
         RepairRequestFileHandling.saveRepairRequests(repairRequestList);
         System.out.println(selectedGenerator.isRepairStatus());
-        // You might want to save the updated data back to your source (e.g., binary file) here
+
         
     }
 
