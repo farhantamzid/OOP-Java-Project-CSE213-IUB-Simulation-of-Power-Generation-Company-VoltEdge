@@ -33,5 +33,7 @@ public class InputFuelCostandUsageController implements Initializable {
 
   DataAnalyst dataAnalyst = new DataAnalyst("name", "address",
                 "email", "phone", "password", 0, LocalDate.now());
+  String fileName = "fuel_cost_data.bin";
+    dataAnalyst.writeFuelCostinBIN(fuelType, cost, entryDate, fileName);
     }
 }
