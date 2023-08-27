@@ -34,9 +34,16 @@ public class FinancemanagerDashboardController implements Initializable {
     }
 
     @FXML
-    private void OnActionPaymentHistory(ActionEvent event) {
+    private void OnActionPaymentHistory(ActionEvent event) throws IOException {
+        Parent PaymentRevenueTableViewViewParent = FXMLLoader.load(getClass().getResource("PaymentRevenueTableView.fxml"));
+        Scene PaymentRevenueTableViewViewScene = new Scene(PaymentRevenueTableViewViewParent);
+        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage newWindow  = new Stage();
+        
+        newWindow.setTitle("Customer");
+        newWindow.setScene(PaymentRevenueTableViewViewScene);
+        newWindow.show();
     }
-
     @FXML
     private void OnActionExpenseReport(ActionEvent event) throws IOException {
     FXMLLoader loader = new FXMLLoader(getClass().getResource("ExpenseTableView.fxml"));

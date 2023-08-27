@@ -11,14 +11,19 @@
    <children>
       <MenuBar layoutY="7.0">
          <menus>
-            <Menu mnemonicParsing="false" text="Payment Request Approval">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#OnActionPurchaseRequests" text="Approve Purchase Request" />
-               </items>
+            <Menu mnemonicParsing="false" text="Requests Approval">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#onActionPurchaseRequests" text="Equipment Purchase Requests" />
+              </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Payment History">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#OnActionPaymentHistory" text="Show Payment History Table" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Approval History">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#OnActionPurchaseRequests" text="View Approval History" />
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="View Expense ">
@@ -26,15 +31,9 @@
                   <MenuItem mnemonicParsing="false" onAction="#OnActionExpenseReport" text="Show Expense Report" />
                </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Requests Approval">
-              <items>
-                <MenuItem mnemonicParsing="false" onAction="#onActionPurchaseRequests" text="Equipment Purchase Requests" />
-              </items>
-            </Menu>
             <Menu mnemonicParsing="false" text="Income Statement">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#OnActionVIewIncomeStatement" text="View Income Statement" />
-                  <MenuItem mnemonicParsing="false" onAction="#OnActionIncomeStatementGeneration" text="Generate Income Statement Report" />
               </items>
             </Menu>
          </menus>
